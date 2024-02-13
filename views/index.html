@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestión de Aparcamiento</title>
+        <!-- Enlace al archivo CSS de Bootstrap -->
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <style>
+        /* Puedes agregar estilos personalizados aquí si es necesario */
+        body {
+            padding-top: 50px; /* Añade un espacio en la parte superior para el navbar */
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-5">Gestión de Aparcamiento</h1>
+            <button onclick="mostrarPlazas('planta1')"
+                class="btn btn-primary mt-3">Mostrar plazas de la primera
+                planta</button>
+            <button onclick="mostrarPlazas('planta2')"
+                class="btn btn-primary mt-3">Mostrar plazas de la segunda
+                planta</button>
+        </div>
+
+        <!-- Enlace al archivo JavaScript de Bootstrap (opcional, solo si necesitas componentes interactivos) -->
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+        function mostrarPlazas(planta) {
+            window.location.href = planta + '.html';
+        }
+    </script>
+    </body>
+</html>
