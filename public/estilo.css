@@ -1,11 +1,14 @@
 body {
-    padding-top: 50px; /* Añade un espacio en la parte superior para el navbar */
+    background-image: url('./granvia.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
 }
 
+
 .plaza {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+    border: 2px solid black;
     text-align: center;
     line-height: 50px;
     margin: 0 5px;
@@ -19,3 +22,18 @@ body {
 .boton {
     margin-top: 10px;
 }
+
+#plazas {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    flex-direction: row; /* Coloca los elementos en una fila */
+    
+}
+
+.container-planta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Establece la altura del contenedor al 100% de la ventana */
+}
+
