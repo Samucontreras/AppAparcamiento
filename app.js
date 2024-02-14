@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mysql = require('mysql');
+const mysql2 = require('mysql2');
 
 // Configuración de la conexión a la base de datos
-const connection = mysql.createConnection({
+const connection = mysql2.createConnection({
     host: 'localhost',
     port: 3306, 
     user: 'root',
