@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Enlace al archivo CSS de Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./estilo.css">
-    <title>Parking Planta 1</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Enlace al archivo CSS de Bootstrap -->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./estilo.css">
+        <title>Parking Planta 1</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Gestión de Aparcamiento</a>
+            </div>
+        </nav>
+        <div class="container-planta">
+            <h1 class="mt-5">Parking - Planta 1</h1>
+            <div id="plazas">
+                <!-- Las plazas se llenarán aquí -->
+            </div>
+            <button class="btn btn-primary mt-3" onclick="cocheEntra()">Entrada
+                de coche</button>
+            <button class="btn btn-danger mt-3" onclick="cocheSale()">Salida de
+                coche</button>
+            <button class="btn btn-info mt-3"
+                onclick="regresarAlIndex()">Regresar al índice</button>
+        </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Gestión de Aparcamiento</a>
-    </div>
-</nav>
-
-<div class="container-planta">
-    <h1 class="mt-5">Parking - Planta 1</h1>
-    <div id="plazas">
-        <!-- Las plazas se llenarán aquí -->
-    </div>
-    <button class="btn btn-primary mt-3" onclick="cocheEntra()">Entrada de coche</button>
-    <button class="btn btn-danger mt-3" onclick="cocheSale()">Salida de coche</button>
-    <button class="btn btn-info mt-3" onclick="regresarAlIndex()">Regresar al índice</button>
-</div>
-
-<script src="./logica1.js"></script>
-</body>
+        <script src="./logica1.js"></script>
+    </body>
 </html>

@@ -10,7 +10,7 @@ const connection = mysql2.createConnection({
     port: 3306, 
     user: 'root',
     password: '25012173',
-    database: 'parking'
+    database: 'parking2'
 });
 connection.connect((err) => {
     if (err) {
