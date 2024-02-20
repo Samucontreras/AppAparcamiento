@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= titulo %>
+    </title>
+    <script src="../public/main.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gestión de Aparcamiento</a>
+        </div>
+    </nav>
+    <div class="container-planta">
+
+        <button onclick="mostrarPlazas('planta1')" class="btn btn-primary mt-3">Mostrar plazas de la primera
+            planta</button>
+        <button onclick="mostrarPlazas('planta2')" class="btn btn-primary mt-3">Mostrar plazas de la segunda
+            planta</button>
+
+        <div class="planta">
+            <% for (let i = 0; i < 10; i++) { %>
+                <% include partials/spot.ejs, { id: plazas[i] } %>
+            <% } %>
+        </div>
+        <div class="planta">
+            <% for (let i = 0; i < 10; i++) { %>
+                <% include partials/spot.ejs, { id: plazas[i] } %>
+            <% } %>
+        </div>
+
+        <button class="btn btn-primary mt-3" onclick="cocheEntra()">Entrada
+            de coche</button>
+        <button class="btn btn-danger mt-3" onclick="cocheSale()">Salida de
+            coche</button>
+    </div>
+
+</body>
+
+</html>
