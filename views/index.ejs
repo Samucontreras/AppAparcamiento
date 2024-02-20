@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= titulo %>
-    </title>
-    <script src="../public/main.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            <%= titulo %>
+        </title>
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <!-- Estilos de Bootstrap -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+        <link src="stylesheet" href="../public/estilo.css">
+        <!-- Iconos de Font Awesome -->
+        <script src="https://kit.fontawesome.com/3f7960f673.js"
+            crossorigin="anonymous"></script>
 
-<body>
+    </head>
+    <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Gestión de Aparcamiento</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Gestión de Aparcamiento</a>
+            </div>
+        </nav>
+        <div class="container-planta">
+
+            <button onclick="mostrarPlazas('planta1')"
+                class="btn btn-primary mt-3">Mostrar plazas de la primera
+                planta</button>
+            <button onclick="mostrarPlazas('planta2')"
+                class="btn btn-primary mt-3">Mostrar plazas de la segunda
+                planta</button>
+            <!-- Separación entre plantas -->
+            <div class="my-5"></div>
+            <div class="row">
+                <% for (let i = 0; i < 10; i++) { %>
+                <div
+                    class="col-1 plaza bg-light text-dark border d-flex justify-content-center align-items-center"
+                    id="<%= plazas[i].id_plaza %>">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <% } %>
+            </div>
+            <div class="my-5"></div>
+            <div class="row">
+                <% for (let i = 10; i < 20; i++) { %>
+                <div
+                    class="col-1 plaza bg-light text-dark border d-flex justify-content-center align-items-center"
+                    id="<%= plazas[i].id_plaza %>">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <% } %>
+            </div>
+            <button class="btn btn-primary mt-3" onclick="cocheEntra()">Entrada
+                de coche</button>
+            <button class="btn btn-danger mt-3" onclick="cocheSale">Salida de
+                coche</button>
+            <script src="main.js"></script>
         </div>
-    </nav>
-    <div class="container-planta">
 
-        <button onclick="mostrarPlazas('planta1')" class="btn btn-primary mt-3">Mostrar plazas de la primera
-            planta</button>
-        <button onclick="mostrarPlazas('planta2')" class="btn btn-primary mt-3">Mostrar plazas de la segunda
-            planta</button>
-
-        <div class="planta">
-            <% for (let i = 0; i < 10; i++) { %>
-                <% include partials/spot.ejs, { id: plazas[i] } %>
-            <% } %>
-        </div>
-        <div class="planta">
-            <% for (let i = 0; i < 10; i++) { %>
-                <% include partials/spot.ejs, { id: plazas[i] } %>
-            <% } %>
-        </div>
-
-        <button class="btn btn-primary mt-3" onclick="cocheEntra()">Entrada
-            de coche</button>
-        <button class="btn btn-danger mt-3" onclick="cocheSale()">Salida de
-            coche</button>
-    </div>
-
-</body>
+    </body>
 
 </html>

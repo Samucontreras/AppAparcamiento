@@ -1,3 +1,4 @@
+const { response } = require('express');
 const db = require('./db');
 
 const insertCar = async (ID_Plaza, matricula) => {
@@ -30,7 +31,8 @@ const getData = async () => {
                 }
             )
         });
-        return respuesta
+
+        return (respuesta);
     } catch (error) {
         
     }

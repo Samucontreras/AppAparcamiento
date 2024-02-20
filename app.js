@@ -12,10 +12,9 @@ app.set('view engine', 'ejs');
 // Ruta para la página principal
 app.get('/', async (req, res) => {
     const data = await dbManager.getData();
-    res.render('index.ejs', { titulo: 'Parking', plazas: data });
+    if (data)
+        res.render('index.ejs', { titulo: 'Parking', plazas: data });
 });
-
-
 
 const PORT =  3000;
 app.listen(PORT, () => {
